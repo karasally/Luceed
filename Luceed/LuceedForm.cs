@@ -12,6 +12,7 @@ namespace Luceed
         public LuceedForm()
         {
             InitializeComponent();
+
         }
 
         private async void btnGetByNaziv_Click(object sender, EventArgs e)

@@ -37,19 +37,24 @@
             naziv = new DataGridViewTextBoxColumn();
             btnGetByNaziv = new Button();
             tabPage2 = new TabPage();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            tabPage3 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridArtikli).BeginInit();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(575, 322);
+            tabControl1.Size = new Size(575, 408);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -61,9 +66,9 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(567, 289);
+            tabPage1.Size = new Size(567, 375);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Traži artikle po nazivu";
+            tabPage1.Text = "Articles by name";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnOcisti
@@ -92,7 +97,7 @@
             gridArtikli.ReadOnly = true;
             gridArtikli.RowHeadersWidth = 51;
             gridArtikli.RowTemplate.Height = 29;
-            gridArtikli.Size = new Size(555, 202);
+            gridArtikli.Size = new Size(555, 288);
             gridArtikli.TabIndex = 1;
             // 
             // id
@@ -123,26 +128,57 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(comboBox1);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(567, 289);
+            tabPage2.Size = new Size(567, 375);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Calculations by payment type";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(96, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Business unit:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(115, 25);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(256, 28);
+            comboBox1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(567, 375);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Calculations by products";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // LuceedForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(597, 344);
+            ClientSize = new Size(597, 432);
             Controls.Add(tabControl1);
             Name = "LuceedForm";
-            Text = "Form1";
+            Text = "Luceed API";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gridArtikli).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -157,5 +193,8 @@
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn naziv;
         private Button btnOcisti;
+        private Label label1;
+        private ComboBox comboBox1;
+        private TabPage tabPage3;
     }
 }
