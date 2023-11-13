@@ -18,7 +18,7 @@ namespace Luceed
         {
             try
             {
-                List<Artikl> artikli = new List<Artikl>();
+                List<Article> artikli = new List<Article>();
                 var request = new HttpRequestMessage(HttpMethod.Get, $"https://localhost:7071/api/Article/{txtNaziv.Text}");
                 var response = await client.SendAsync(request);
 
@@ -33,7 +33,7 @@ namespace Luceed
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var resBody = await response.Content.ReadAsStringAsync();
-                    artikli = JsonSerializer.Deserialize<List<Artikl>>(resBody);
+                    artikli = JsonSerializer.Deserialize<List<Article>>(resBody);
 
                     if (artikli.Count == 0)
                     {
