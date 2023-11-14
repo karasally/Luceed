@@ -6,6 +6,7 @@ namespace LuceedAPI.Models
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }
+
         [JsonPropertyName("naziv")]
         public string Naziv { get; set; }
     }

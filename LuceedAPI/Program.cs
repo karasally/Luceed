@@ -21,6 +21,7 @@ app.UseCors(builder => builder
        .AllowAnyMethod()
        .AllowAnyOrigin()
 );
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -30,4 +31,3 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
-

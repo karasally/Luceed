@@ -2,15 +2,8 @@
 using LuceedAPI.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using System.Net;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
-using System.Xml.Linq;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LuceedAPI.Controllers
 {
@@ -38,7 +31,6 @@ namespace LuceedAPI.Controllers
                 var result = JsonSerializer.Deserialize<LuceedArticleResponse>(resBody);
 
                 return Ok(result.Result[0].Artikli);
-
             }
             catch (Exception ex)
             {
@@ -64,9 +56,5 @@ namespace LuceedAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
-
-
     }
 }
